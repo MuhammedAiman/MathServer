@@ -1,0 +1,63 @@
+{% load static %}
+<html>
+<head>
+    <title>math</title>
+    <style>
+        
+h1{
+    border: 2px solid ;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 10px;
+    position: fixed;
+    top: 200px;
+    left: 615px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-variant: small-caps;
+    background: palegreen;
+    font-family: Georgia;
+    color: black;
+}
+form{
+    border: 2px solid pink;
+    background-color:palevioletred ;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 425px;
+    position: fixed;
+    top: 300px;
+    left: 527px;
+    
+}
+
+    </style>
+</head>
+<body bgcolor="paleturquoise">
+    <h1 align="center" > Power Of Lamp </h1>
+    <form align="center" method="POST">
+    {%csrf_token%}
+     
+    <div class="power">
+
+        <label>"INTENSITY"</label>
+        <input type="text" name="intensity" value="{{i}}">
+    </div>
+    <br>
+    <div class="power">
+        <labe>"RESISTANCE"</label>
+        <input type="text" name="resistance" value="{{r}}">
+    </div>
+    <br>
+    <input type="submit" value="CALCULATE">
+    <br>
+    <br>
+    <div class="power">
+        <label>"POWER"</label>
+        <input type="text" name="POWER" value="{{power}}">
+        
+    </div>
+</form>
+</body>
+</html>
